@@ -8,17 +8,17 @@ const Header = () => {
     <nav className="nav">
         <ul className="flex-nav">
             <div className="flex-start">
-            <a href="#">Features</a>
-            <a href="#">Who i am?</a>                
+            <a href="#features">Features</a>
+            <a href="#whoIAm">Who i am?</a>                
             </div>
              <div>
-             <Link >
+             <Link to='/'>
              <img src={logo} alt="Logo" className="logo"/>
              </Link>
              </div>
             <div className="flex-end">
-                <Link>Login</Link>
-                <Link><Button text={'Sign Up'}/></Link>
+                <Link to='/login'>Login</Link>
+                <Link to='/signup'><Button text={'Sign Up'}/></Link>
             </div>
         </ul>
     </nav>

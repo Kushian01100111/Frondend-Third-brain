@@ -1,0 +1,31 @@
+.hero{
+    z-index: 0;
+    max-width: 120rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    display: flex;
+    margin: 0 auto;
+}
+
+.hero>*{
+    grid-row-start: 1;
+    grid-column-start: 1;
+}
+
+.hero-content{
+    padding-top: 1.6rem;
+    padding-bottom: 1.6rem;
+}
+
+.hero-content>*{
+    padding-top: 1.6rem;
+    padding-bottom: 1.6rem;
+}
+
+.heroImg{
+    max-width: 40rem;
+    border-radius: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
