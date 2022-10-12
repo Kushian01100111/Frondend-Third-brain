@@ -1,0 +1,40 @@
+.nav{
+    max-width: 1200px ;
+   margin: 0 auto;
+    width: 100% ;
+    height: 100% ;
+}
+
+.flex-nav{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.flex-start{
+    display: flex;
+    justify-content: flex-start;
+    width: 0;
+    flex-grow: 1;
+    align-items: baseline;
+}
+
+.flex-start>*{
+    margin: 0 15px;
+}
+
+
+.flex-end{
+    display: flex;
+    justify-content: flex-end;
+    width: 0;
+    flex-grow: 1;
+    align-items: baseline;
+}
+
+.flex-end>*{
+    margin: 0 15px;
+}
+
