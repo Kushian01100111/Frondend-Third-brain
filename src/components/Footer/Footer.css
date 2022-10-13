@@ -5,13 +5,14 @@ footer{
     grid-auto-flow: row;
     place-items: start;
     gap: 2.5rem 1rem;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     line-height: 1.25rem;
     display: grid;
     background-color: #2E3747 ;
     border-radius: 0.25rem;
     padding: 2.5rem;
     flex-shrink: 0;
+    color: #F3F3F3;
 }
 
 footer>*{

@@ -1,0 +1,73 @@
+form{
+    margin-top: 5.5rem;
+    margin-bottom: 5.5rem;
+}
+
+
+.loginForm{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    max-width: 45rem;
+    border-radius: 0.75rem;
+    background-color: rgb(255 255 255);
+    padding: 5rem;
+    color: #000;
+}
+
+.loginForm>h1{
+    font-weight: 500;
+    font-size: 5rem;
+    line-height: 2.5rem;
+}
+
+.submitButton{
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 0.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    margin-top: 2rem !important;
+}
+
+.formDiv{
+    justify-content: center;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+}
+
+.formDiv>label+label{
+    margin-top: 2rem;
+}
+
+.label{
+    margin: 0;
+    padding-bottom: 0.5rem;
+    font-weight: 500;
+    color: rgb(51 65 85);
+}
+
+.margin{
+    margin-top: 1.5rem;
+    margin-left: 1.5rem;
+}
+
+.google{
+    padding: 1rem;
+    color: #f3f3f3 !important;
+    background-color: #C53030 !important;
+    width: 100% !important;
+    gap: 0.5rem;
+}
+
+.google:hover{
+    background-color: #bb4646 !important;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.goo{
+    margin-top: 15px;
+}
