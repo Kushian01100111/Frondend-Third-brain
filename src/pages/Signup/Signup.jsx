@@ -1,12 +1,20 @@
 import './Signup.css'
 import { Link } from "react-router-dom"
 import Button from "../../components/Button/Button"
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
-const Signup = () => {
+const Signup = ({submitSignUp}) => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [errors, setErrors] = useState('')
+
+  const onSubmit = async (e)=>{
+    e.preventDefault()
+      if(!name && !email && !password){
+         setErrors('Complete the form correctly')
+      }else submitSignUp({name,email,password})
+  }
   return (
     <>
     <nav className='flex-nav'>
@@ -16,7 +24,8 @@ const Signup = () => {
     </nav>
     <div className='loginForm'>
     <h1>Sign up</h1>
-      <form action="" className='form'>
+      <p className='errors' value={errors}></p>
+      <form action="" className='form' onSubmit={onSubmit}>
         <div className='formDiv'>
         <label htmlFor="name"><p className='label'>User name</p>
             <input type="text" 
