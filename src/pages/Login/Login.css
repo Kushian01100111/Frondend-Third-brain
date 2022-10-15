@@ -13,7 +13,8 @@ form{
     border-radius: 0.75rem;
     background-color: rgb(255 255 255);
     padding: 5rem;
-    color: #000;
+    color: #2E3747;
+    z-index: 1;
 }
 
 .loginForm>h1{
@@ -21,6 +22,18 @@ form{
     font-size: 5rem;
     line-height: 2.5rem;
 }
+
+.loginForm>p{
+    text-align: center;
+}
+
+.loginForm>p>a>span{
+    color: #3E4727;
+}
+.loginForm>p>a>span:hover{
+  color:#9CB068;
+}
+
 
 .submitButton{
     width: 100%;
@@ -42,6 +55,8 @@ form{
 .formDiv>label+label{
     margin-top: 2rem;
 }
+
+
 
 .label{
     margin: 0;

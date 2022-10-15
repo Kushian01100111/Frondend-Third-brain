@@ -30,6 +30,6 @@
 
 .btn:hover{
     transition:all 0.5ms ease-out 0.2ms; 
-    background-color: #9CB068;
+    background-color: #5b6c2f;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
