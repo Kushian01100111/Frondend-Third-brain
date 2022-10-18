@@ -1,9 +1,9 @@
 import './Signup.css'
-import { Link } from "react-router-dom"
+import { Link, redirect } from "react-router-dom"
 import Button from "../../components/Button/Button"
 import { useState } from 'react'
 
-const Signup = ({submitSignUp}) => {
+const Signup = ({submitSignUp,error}) => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -13,7 +13,10 @@ const Signup = ({submitSignUp}) => {
     e.preventDefault()
       if(!name && !email && !password){
          setErrors('Complete the form correctly')
-      }else submitSignUp({name,email,password})
+      }else{ await submitSignUp({name,email,password})}
+
+      setErrors(error.errors)
+      console.log(errors)
   }
   return (
     <>
@@ -24,7 +27,7 @@ const Signup = ({submitSignUp}) => {
     </nav>
     <div className='loginForm'>
     <h1>Sign up</h1>
-      <p className='errors' value={errors}></p>
+      <p className='errors'>{errors}</p>
       <form action="" className='form' onSubmit={onSubmit}>
         <div className='formDiv'>
         <label htmlFor="name"><p className='label'>User name</p>
