@@ -1,9 +1,9 @@
 import './Signup.css'
-import { Link, redirect } from "react-router-dom"
+import { Link, Navigate } from "react-router-dom"
 import Button from "../../components/Button/Button"
 import { useState } from 'react'
 
-const Signup = ({submitSignUp,error}) => {
+const Signup = ({submitSignUp,error,user}) => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -20,6 +20,7 @@ const Signup = ({submitSignUp,error}) => {
   }
   return (
     <>
+    {user &&  (<Navigate to="/main" />)}
     <nav className='flex-nav'>
       <div className='flex-start margin'>
         <Link to='/'><Button text={'Go back'}/></Link>

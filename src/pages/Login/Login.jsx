@@ -1,13 +1,27 @@
 import './Login.css'
-import { Link } from "react-router-dom"
+import { Link , Navigate} from "react-router-dom"
 import Button from "../../components/Button/Button"
 import { useState, useEffect } from 'react'
 
-const Login = () => {
+const Login = ({submitLogin,error,user}) => {
   const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
+  const [password, setPassword] = useState('');
+  const [errors, setErrors] = useState('')
+
+  const onSubmit = async (e)=>{
+    e.preventDefault()
+      if(!email && !password){
+         setErrors('Complete the form correctly')
+      }else{ 
+        await submitLogin({email,password})}
+
+      setErrors(error.errors)
+      console.log(errors)
+  }
+
   return (
     <>
+     {user &&  (<Navigate to="/main" />)}
       <nav className='flex-nav'>
         <div className='flex-start margin'>
           <Link to='/'><Button text={'Go back'}/></Link>
@@ -15,7 +29,7 @@ const Login = () => {
       </nav>
       <div className='loginForm'>
       <h1>Login</h1>
-        <form action="" className='form'>
+        <form action="" className='form' onSubmit={onSubmit}>
           <div className='formDiv'>
             <label htmlFor="email"><p className='label'>Email address</p>
               <input type="email" 
